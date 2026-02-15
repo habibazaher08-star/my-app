@@ -36,7 +36,7 @@ type FormData = z.infer<typeof formSchema>
 
 export default function Login() {
   const searchParams = useSearchParams()
-  const callbackUrl = searchParams.get('callback-url')
+  const callbackUrl = searchParams.get('callbackUrl')
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
