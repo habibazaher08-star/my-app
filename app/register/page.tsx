@@ -58,11 +58,9 @@ export default function Register() {
       console.log("submit started")
 
     
-      const baseUrl =
-        process.env.NEXT_PUBLIC_API ||
-        "https://ecommerce.routemisr.com/api/v1"
+      const apiUrl = "https://ecommerce.routemisr.com/api/v1/auth/signup"
 
-      const res = await fetch(`${baseUrl}/auth/signup`, {
+      const res = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
