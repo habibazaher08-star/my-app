@@ -8,7 +8,7 @@ export async function payCashOrder(cartId:string , shippingAddress:shipping){
     if(!token){
         throw new Error('Unauthorized....')
     }
-    const response= await fetch (`${process.env.API}/orders/${cartId}` , {
+    const response= await fetch ( `https://ecommerce.routemisr.com/api/v1/orders/${cartId}` , {
         method:'POST' , 
         headers:{
             token: token , 
